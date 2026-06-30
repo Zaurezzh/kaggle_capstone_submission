@@ -61,37 +61,45 @@ graph TD
 
 ---
 
-## Detailed Setup Guide
+## Getting Started
 
-### 1. Clone the repository
-```bash
-git clone <your-repo-url>
-cd kaggle_capstone_submission
-```
+### Prerequisites
 
-### 2. Set up the Environment
-It is recommended to use a virtual environment.
-```bash
-python -m venv venv
-# On Windows:
-venv\Scripts\activate
-# On Mac/Linux:
-source venv/bin/activate
-```
+- Python 3.10+
+- A Google API key (for Gemini)
 
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+### Installation
 
-### 4. Configure API Key
-Create a `.env` file in the root directory and add your Google Gemini API key:
-```env
-GOOGLE_API_KEY=your_gemini_api_key_here
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Zaurezzh/kaggle_capstone_submission.git
+   cd kaggle_capstone_submission
+   ```
 
-### 5. Run the Application
-Start the FastAPI server using Uvicorn:
+2. **Set up the environment (optional but recommended):**
+   ```bash
+   python -m venv venv
+   # On Windows:
+   venv\Scripts\activate
+   # On Mac/Linux:
+   source venv/bin/activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure API Key:**
+   Create a `.env` file in the root directory and add your Google Gemini API key:
+   ```env
+   GOOGLE_API_KEY=your_gemini_api_key_here
+   ```
+
+### Running the App
+
+Start the FastAPI server:
+
 ```bash
 uvicorn app:app --host 127.0.0.1 --port 8005 --reload
 ```
